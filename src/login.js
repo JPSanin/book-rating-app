@@ -27,30 +27,9 @@ function login(){
 function addBooks(){
     const book1={
         title: '100 years of solitud',
-        rating: 0.0
+        rating: 0.0,
+        votes: 0
     }
-
-    const book2={
-        title: 'To Kill a Mocking Bird',
-        rating: 0.0
-    }
-
-    const book3={
-        title: 'A Wrinkle in Time',
-        rating: 0.0
-    }
-
-    const book4={
-        title: 'Go Big or Go Home',
-        rating: 0.0
-    }
-
-    const book5={
-        title: 'The Great Gatsby',
-        rating: 0.0
-    }
-
-
     const db = getDatabase();
     const bookRef = push(ref(db, 'books'));
     book1["id"] = bookRef.key;
